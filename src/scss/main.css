@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.memory-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  transform: scale(1);
+  perspective: 1000px;
+  transition: transform 0.5s;
+}
+.memory-game .card {
+  position: relative;
+  background: dodgerblue;
+  width: calc(25% - 10px);
+  height: calc(33.3% - 10px);
+  border-radius: 7px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+.memory-game .card .card__front-face, .memory-game .card .card__back-face {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  backface-visibility: hidden;
+}
+.memory-game .card .card__front-face {
+  transform: rotateY(180deg);
+}
+.memory-game .card:active {
+  transform: scale(0.97);
+  transition: transform 0.3s;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=main.css.map */
