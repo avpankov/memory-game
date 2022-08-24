@@ -9,8 +9,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 640px;
-    height: 640px;
+    max-width: 900px;
+    height: 700px;
     margin: auto;
     transform: scale(1);
     perspective: 1000px;
@@ -19,7 +19,7 @@
     .card {
         position: relative;
         background: dodgerblue;
-        width: calc(25% - 10px);
+        width: calc(20% - 10px);
         height: calc(33.3% - 10px);
         border-radius: 7px;
         margin: 5px;
