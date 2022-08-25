@@ -4,13 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Nunito', sans-serif;
+    color: aliceblue;
+    background-color: aliceblue;
+}
+
 .memory-game {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     max-width: 900px;
-    height: 700px;
+    height: 100vh;
     margin: auto;
     transform: scale(1);
     perspective: 1000px;
@@ -19,8 +26,6 @@
     .card {
         position: relative;
         background: dodgerblue;
-        width: calc(20% - 10px);
-        height: calc(33.3% - 10px);
         border-radius: 7px;
         margin: 5px;
         display: flex;
@@ -48,4 +53,45 @@
 
 .flip {
     transform: rotateY(180deg);
+}
+
+.modal {
+    max-width: 500px;
+    height: 150px;
+    margin: calc(50vh - 75px) auto 0;
+    padding: 0 4%;
+    background: dodgerblue;
+    border-radius: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    ul {
+
+        li {
+            display: inline-block;
+
+            button {
+                font-size: 24px;
+                color: aliceblue;
+                background: transparent;
+                border: none;
+                margin: 0 25px;
+                cursor: pointer;
+                transition: .3s all;
+            }
+
+            button:hover {
+                color: gold;
+                text-decoration: underline;
+            }
+        }
+    }
+
 }
